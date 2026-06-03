@@ -778,7 +778,6 @@ static TCGv conver_src_value(DisasContext *ctx, TCGv SrcReg, int SrcType, int fl
         } else if (flag == AU_UW) {
             tcg_gen_ext32u_tl(t, SrcReg);
         } else {
-            fprintf(stderr, "error SrcRType:%d in INSTR_TYPE_CMP_SETC_SWUW\n", flag);
             g_assert_not_reached();
         }
     } else if (SrcType == INSTR_TYPE_CMP_SETC_LD_ST) {
